@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 
 public class Utility {
 	static Properties pro;
+
 	
 	public static String[][] readExcel(String fileName,String sheetName) throws BiffException, IOException
 	{
@@ -35,8 +36,9 @@ public class Utility {
 			{
 				Cell cell = sheet.getCell(j,i);
 				data[i][j] =cell.getContents();
-				System.out.println(data[i][j]);
+				System.out.print(data[i][j]);
 			}
+			System.out.println();
 		}
 		return data;
 		
